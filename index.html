@@ -25,7 +25,35 @@
     
     <!-- Modernizer JS -->
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <style>
+      /* Semua perangkat akan mewarisi font dan margin umum */
 
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Konten khusus untuk mobile */
+      .mobile-only {
+        display: none; /* Default sembunyikan di desktop */
+      }
+
+      /* Menampilkan elemen khusus desktop ketika ukuran layar lebih dari 768px */
+      @media only screen and (min-width: 769px) {
+        .desktop-only {
+          display: block;
+        }
+      }
+
+      /* Menampilkan elemen khusus mobile ketika ukuran layar kurang dari 768px */
+      @media only screen and (max-width: 768px) {
+        .mobile-only {
+          display: block;
+          margin-top: 80px;
+        }
+      }
+    </style>
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -34,7 +62,12 @@
 </head>
 
 <body>
-
+    <div class="mobile-only">
+      <div class="decodex">
+        <a href="https://cutt.ly/arWBktvg"> <img src="1.jpg" width="100%" /></a>
+      </div>
+    </div>
+    <div class="desktop-only">
     <!-- header area start -->
     <header>
 
@@ -429,5 +462,6 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!--=== Active Js ===-->
     <script src="assets/js/active.js"></script>
+    </div>
 </body>
 </html>
